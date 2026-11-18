@@ -41,6 +41,7 @@ public class DetailActivity extends BaseActivity {
     @Nullable
     private ExplorationTaskEntity task;
     private boolean favorite = false;
+    private boolean cachedRequested = false;
 
     private TabLayout tabs;
     private LinearLayout panelIntro;
@@ -159,6 +160,11 @@ public class DetailActivity extends BaseActivity {
     }
 
     private void render(CulturePointEntity p) {
+        // 详情页读取即预缓存：离线时同一页面仍可直接打开
+        if (!p.isCached() && !cachedRequested) {
+            cachedRequested = true;
+            cultureRepo.cachePoint(p.id);
+        }
         ImageView cover = findViewById(R.id.img_cover);
         cover.setBackgroundResource(UiUtils.drawableId(this, p.coverRes, R.drawable.bg_cover_1));
 

@@ -27,6 +27,7 @@ import com.bin.qionglouexplorer.data.repo.MessageRepository;
 import com.bin.qionglouexplorer.data.repo.TaskRepository;
 import com.bin.qionglouexplorer.ui.detail.DetailActivity;
 import com.bin.qionglouexplorer.ui.message.MessageActivity;
+import com.bin.qionglouexplorer.util.GeoUtils;
 
 import java.util.List;
 
@@ -70,6 +71,20 @@ public class HomeFragment extends Fragment {
         bindAdapters(view);
         bindActions(view);
         observeData();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        refreshOfflineBanner();
+    }
+
+    private void refreshOfflineBanner() {
+        View banner = getView() == null ? null : getView().findViewById(R.id.banner_offline);
+        if (banner != null) {
+            banner.setVisibility(
+                    GeoUtils.isOnline(requireContext()) ? View.GONE : View.VISIBLE);
+        }
     }
 
     private void bindViews(View view) {

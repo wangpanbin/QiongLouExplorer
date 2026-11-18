@@ -160,8 +160,8 @@ com.bin.qionglouexplorer
 - [x] **8. 扫码页**：`ScanActivity`（ZXing 内嵌 + 手动编号降级 + 成功/失败反馈）
 - [x] **9. 任务页 + 建档**：`TaskFragment`（进度、立即挑战、提交后写 `checkin` + 加经验积分 + 生成消息）
 - [x] **10. AI 导览**：`AssistantEngine` 本地规则（关键词→点位/年代/推荐路线三类模板）+ 聊天 UI + 快捷芯片
-- [ ] **11. 个人中心 + 消息**：三统计、四个入口、`MessageActivity`（红点未读）、`FavoriteActivity`、`MyTaskActivity`
-- [ ] **12. 离线**：`OfflineActivity`（缓存数/待同步数/立即同步模拟服务端校验），断网时详情页走 Room 兜底 + 顶部离线提示条
+- [x] **11. 个人中心 + 消息**：三统计、四个入口、`MessageActivity`（红点未读）、`FavoriteActivity`、`MyTaskActivity`
+- [x] **12. 离线**：`OfflineActivity`（缓存数/待同步数/立即同步模拟服务端校验），断网时详情页走 Room 兜底 + 顶部离线提示条
 - [ ] **13. 单测**：`GeoUtilsTest` + `AssistantEngineTest`，删掉 `ExampleUnitTest`
 - [ ] **14. 构建与验收**：`./gradlew assembleDebug`；`./gradlew test`；模拟器安装走完主线 7 步；断网复测详情/收藏/离线页
 - [ ] **15. Git 分步提交**（`git init` 后 6 次）：

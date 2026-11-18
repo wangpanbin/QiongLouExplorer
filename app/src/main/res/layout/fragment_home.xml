@@ -297,6 +297,38 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <!-- 离线提示条 -->
+            <LinearLayout
+                android:id="@+id/banner_offline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/bg_offline_banner"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="9dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:contentDescription="@string/common_offline"
+                    android:src="@drawable/ic_offline"
+                    app:tint="@color/brand_warning" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:text="@string/detail_offline_banner"
+                    android:textColor="#8A5A16"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
             <!-- 搜索结果 -->
             <LinearLayout
                 android:id="@+id/group_search_result"
