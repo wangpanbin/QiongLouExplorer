@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 助手消息气泡：左侧机器人（含头像） -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    android:orientation="horizontal">
+
+    <FrameLayout
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:background="@drawable/bg_avatar_ring">
+
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_avatar"
+            android:contentDescription="@string/assistant_title"
+            android:padding="6dp"
+            android:src="@drawable/ic_pagoda"
+            app:tint="@color/white" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/text_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="36dp"
+        android:layout_weight="1"
+        android:background="@drawable/bg_bubble_bot"
+        android:lineSpacingExtra="5dp"
+        android:paddingHorizontal="14dp"
+        android:paddingVertical="11dp"
+        android:textColor="@color/text_primary"
+        android:textSize="14sp" />
+</LinearLayout>
