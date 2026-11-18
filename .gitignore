@@ -1,0 +1,19 @@
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+# 覆盖全局 git.ignore 的 *.jar 规则:Gradle Wrapper 必须随仓库入库,
+# 否则别人克隆后 ./gradlew 直接失效。
+!gradle/wrapper/gradle-wrapper.jar
+
