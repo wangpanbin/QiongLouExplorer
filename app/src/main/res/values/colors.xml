@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 品牌主色 -->
+    <color name="brand_primary">#7C5CFF</color>
+    <color name="brand_primary_dark">#5B3FD9</color>
+    <color name="brand_primary_light">#A78BFF</color>
+    <color name="brand_primary_soft">#EFEBFF</color>
+    <color name="brand_accent">#FF9A6C</color>
+    <color name="brand_accent_soft">#FFF1E8</color>
+    <color name="brand_success">#2FBF71</color>
+    <color name="brand_success_soft">#E6F7EE</color>
+    <color name="brand_warning">#F5A524</color>
+    <color name="brand_info">#3BA3E0</color>
+
+    <!-- 背景与表面 -->
+    <color name="bg_page">#F7F6FB</color>
+    <color name="bg_top_gradient_start">#F1ECFF</color>
+    <color name="bg_top_gradient_end">#FFF7F2</color>
+    <color name="bg_card">#FFFFFF</color>
+    <color name="bg_surface_soft">#F2F0F8</color>
+    <color name="bg_splash_top">#2A1E5C</color>
+    <color name="bg_splash_bottom">#7C5CFF</color>
+    <color name="bg_chip">#F1EFFA</color>
+    <color name="bg_chip_selected">#7C5CFF</color>
+    <color name="bg_scrim">#66000000</color>
+
+    <!-- 地图底图 -->
+    <color name="map_land">#F0EEE6</color>
+    <color name="map_block">#E4E0D4</color>
+    <color name="map_block_alt">#EAE6DB</color>
+    <color name="map_water">#CFE0EC</color>
+    <color name="map_road">#FFFFFF</color>
+    <color name="map_road_secondary">#F7F5EF</color>
+    <color name="map_label">#9B9486</color>
+
+    <!-- 文字 -->
+    <color name="text_primary">#1F1B2E</color>
+    <color name="text_secondary">#8A849B</color>
+    <color name="text_tertiary">#B5AFC4</color>
+    <color name="text_on_primary">#FFFFFF</color>
+    <color name="text_inverse">#FFFFFF</color>
+
+    <!-- 线条与阴影 -->
+    <color name="divider">#EDEBF3</color>
+    <color name="stroke_soft">#E6E3F0</color>
+    <color name="shadow_soft">#14000000</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>

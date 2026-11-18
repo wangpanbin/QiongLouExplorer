@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- V0.1 只做浅色主题：夜间模式沿用与浅色一致的视觉，避免深色下自绘地图与占位图对比度失衡。 -->
+    <style name="Base.Theme.QiongLouExplorer" parent="Theme.Material3.Light.NoActionBar" />
+</resources>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 首页四宫格入口 -->
+    <string-array name="home_entry_titles">
+        <item>@string/home_entry_guide</item>
+        <item>@string/home_entry_task</item>
+        <item>@string/home_entry_map</item>
+        <item>@string/home_entry_profile</item>
+    </string-array>
+
+    <string-array name="home_entry_icons">
+        <item>@drawable/ic_building</item>
+        <item>@drawable/ic_badge</item>
+        <item>@drawable/ic_tab_map</item>
+        <item>@drawable/ic_tab_profile</item>
+    </string-array>
+
+    <!-- 地图分类筛选 -->
+    <string-array name="map_filter_labels">
+        <item>@string/map_filter_all</item>
+        <item>@string/category_architecture</item>
+        <item>@string/category_history</item>
+        <item>@string/category_folk</item>
+        <item>@string/category_food</item>
+    </string-array>
+
+    <!-- 助手快捷提问 -->
+    <string-array name="assistant_quick_questions">
+        <item>文昌阁建于什么时候？</item>
+        <item>骑楼老街有什么值得看的？</item>
+        <item>推荐一条半天游览路线</item>
+        <item>海口有哪些特色美食？</item>
+    </string-array>
+</resources>

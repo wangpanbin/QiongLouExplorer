@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">琼楼寻踪</string>
+
+    <!-- 启动页 -->
+    <string name="splash_title">琼楼寻踪</string>
+    <string name="splash_subtitle">— 探寻古韵，遇见历史 —</string>
+    <string name="splash_tagline">从一座骑楼开始，发现一段历史</string>
+    <string name="splash_start">开始探索</string>
+
+    <!-- 底部导航 -->
+    <string name="tab_home">首页</string>
+    <string name="tab_map">地图</string>
+    <string name="tab_task">任务</string>
+    <string name="tab_assistant">助手</string>
+    <string name="tab_profile">我的</string>
+
+    <!-- 首页 -->
+    <string name="home_search_hint">搜索景点、任务…</string>
+    <string name="home_banner_title">探秘古城</string>
+    <string name="home_banner_subtitle">开启你的寻踪之旅</string>
+    <string name="home_entry_guide">景点导览</string>
+    <string name="home_entry_task">任务挑战</string>
+    <string name="home_entry_map">地图探索</string>
+    <string name="home_entry_profile">我的</string>
+    <string name="home_hot_title">热门推荐</string>
+    <string name="home_hot_more">更多</string>
+    <string name="home_near_title">附近值得探索</string>
+    <string name="home_near_distance">距你 %1$s</string>
+    <string name="home_search_empty">没有找到相关景点，换个关键词试试</string>
+
+    <!-- 地图 -->
+    <string name="map_title">文化地图</string>
+    <string name="map_filter_all">全部</string>
+    <string name="map_card_distance">距你 %1$s</string>
+    <string name="map_card_navigate">开始导航</string>
+    <string name="map_card_list">列表</string>
+    <string name="map_user_location">我的位置</string>
+    <string name="map_no_navigation_app">未找到可用的地图应用</string>
+
+    <!-- 详情 -->
+    <string name="detail_tab_intro">简介</string>
+    <string name="detail_tab_task">任务</string>
+    <string name="detail_tab_comment">评论</string>
+    <string name="detail_era">建筑年代</string>
+    <string name="detail_style">建筑风格</string>
+    <string name="detail_address">详细地址</string>
+    <string name="detail_rating">%1$.1f</string>
+    <string name="detail_visits">%1$s 人次访问</string>
+    <string name="detail_favorite">收藏</string>
+    <string name="detail_favorited">已收藏</string>
+    <string name="detail_scan_checkin">扫码打卡</string>
+    <string name="detail_navigate_here">导航到这里</string>
+    <string name="detail_related_title">附近同类点位</string>
+    <string name="detail_related_empty">暂无同类点位</string>
+    <string name="detail_comment_empty">评论功能将在 V0.2 开放，敬请期待</string>
+    <string name="detail_task_empty">该点位暂未配置探索任务</string>
+    <string name="detail_challenge_now">立即挑战</string>
+    <string name="detail_offline_banner">当前为离线模式，内容来自本地缓存</string>
+    <string name="detail_source_note">资料说明：%1$s</string>
+    <string name="detail_cached_tag">已离线缓存</string>
+
+    <!-- 扫码 -->
+    <string name="scan_title">扫码寻宝</string>
+    <string name="scan_hint">将摄像头对准骑楼旁的二维码</string>
+    <string name="scan_manual">手动输入编号</string>
+    <string name="scan_manual_hint">输入点位编号，例如 1002</string>
+    <string name="scan_confirm">确认</string>
+    <string name="scan_cancel">取消</string>
+    <string name="scan_invalid_format">二维码格式不正确，应为 QIONGLOU:POINT:编号</string>
+    <string name="scan_not_found">未找到编号为 %1$s 的文化点位</string>
+    <string name="scan_success">打卡成功，经验 +%1$d</string>
+    <string name="scan_already">该点位已完成打卡</string>
+    <string name="scan_permission_denied">未获得相机权限，请使用手动输入编号</string>
+
+    <!-- 任务 -->
+    <string name="task_title">任务挑战</string>
+    <string name="task_progress">已完成 %1$d / %2$d</string>
+    <string name="task_reward">奖励 经验 %1$d · 积分 %2$d</string>
+    <string name="task_status_available">可挑战</string>
+    <string name="task_status_done">已完成</string>
+    <string name="task_action_challenge">立即挑战</string>
+    <string name="task_action_submit">提交任务</string>
+    <string name="task_submit_success">任务完成！经验 +%1$d，积分 +%2$d</string>
+    <string name="task_submit_duplicated">该任务已经完成过了</string>
+    <string name="task_empty">暂无可挑战任务</string>
+
+    <!-- 助手 -->
+    <string name="assistant_title">琼楼小导游</string>
+    <string name="assistant_welcome">你好，我是琼楼小导游。关于海口骑楼的历史、建筑与路线，尽管问我～</string>
+    <string name="assistant_input_hint">想问点什么…</string>
+    <string name="assistant_send">发送</string>
+    <string name="assistant_voice">语音提问将在 V0.2 开放</string>
+    <string name="assistant_footer">内容来自本地文化知识库</string>
+
+    <!-- 个人中心 -->
+    <string name="profile_title">我的</string>
+    <string name="profile_exp">经验</string>
+    <string name="profile_checkin">打卡</string>
+    <string name="profile_badge">勋章</string>
+    <string name="profile_my_task">我的任务</string>
+    <string name="profile_my_favorite">我的收藏</string>
+    <string name="profile_offline">离线地图</string>
+    <string name="profile_settings">设置</string>
+    <string name="profile_level">Lv.%1$d 寻踪者</string>
+    <string name="profile_default_nickname">探寻者</string>
+    <string name="profile_default_signature">每一次驻足，都是一次寻踪</string>
+
+    <!-- 设置 -->
+    <string name="settings_title">设置</string>
+    <string name="settings_clear_data">清除本地数据</string>
+    <string name="settings_clear_data_desc">恢复为初始种子数据</string>
+    <string name="settings_about">关于琼楼寻踪</string>
+    <string name="settings_about_content">琼楼寻踪 V0.1\n海口骑楼历史文化探索与数字导览平台\n课程设计项目，仅供学习与评审使用。\n文化资料为演示数据，正式上线前须经地方文献核实。</string>
+    <string name="settings_cleared">本地数据已重置</string>
+
+    <!-- 消息 -->
+    <string name="message_title">消息</string>
+    <string name="message_tab_system">系统通知</string>
+    <string name="message_tab_friend">好友消息</string>
+    <string name="message_empty">暂时没有消息</string>
+
+    <!-- 收藏 / 我的任务 -->
+    <string name="favorite_title">我的收藏</string>
+    <string name="favorite_empty">还没有收藏任何点位，去首页逛逛吧</string>
+    <string name="my_task_title">我的任务</string>
+    <string name="my_task_pending">待完成</string>
+    <string name="my_task_done">已完成</string>
+    <string name="my_task_empty">还没有任务记录</string>
+
+    <!-- 离线 -->
+    <string name="offline_title">离线使用</string>
+    <string name="offline_cached">已缓存点位</string>
+    <string name="offline_pending">待同步打卡</string>
+    <string name="offline_support">离线状态下仍可阅读已缓存的景点介绍与收藏，联网后再同步打卡记录。</string>
+    <string name="offline_sync_now">立即同步</string>
+    <string name="offline_syncing">正在同步…</string>
+    <string name="offline_sync_success">同步完成，%1$d 条打卡记录已上传</string>
+    <string name="offline_sync_empty">没有需要同步的记录</string>
+
+    <!-- 通用 -->
+    <string name="common_confirm">确定</string>
+    <string name="common_cancel">取消</string>
+    <string name="common_meters">%1$d 米</string>
+    <string name="common_km">%1$.1f 公里</string>
+    <string name="common_no_data">暂无数据</string>
+    <string name="common_loading">加载中…</string>
+    <string name="common_back">返回</string>
+    <string name="common_more">更多</string>
+    <string name="common_offline">离线</string>
+
+    <!-- 分类 -->
+    <string name="category_architecture">历史建筑</string>
+    <string name="category_history">历史文化</string>
+    <string name="category_folk">民俗非遗</string>
+    <string name="category_food">海口美食</string>
+</resources>

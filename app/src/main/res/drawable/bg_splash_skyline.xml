@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 启动页底部街区剪影：多层骑楼轮廓，纯矢量，无版权素材。 -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="360dp"
+    android:height="220dp"
+    android:viewportWidth="360"
+    android:viewportHeight="220">
+    <path
+        android:fillColor="#33FFFFFF"
+        android:pathData="M0,150 L0,220 L360,220 L360,150 L340,150 L340,132 L320,132 L320,150 L300,150 L300,120 L280,120 L280,150 L252,150 L252,138 L232,138 L232,150 L208,150 L208,110 L186,110 L186,150 L160,150 L160,134 L140,134 L140,150 L114,150 L114,118 L92,118 L92,150 L66,150 L66,136 L46,136 L46,150 L20,150 L20,144 L0,144 Z" />
+    <path
+        android:fillColor="#1FFFFFFF"
+        android:pathData="M0,178 L0,220 L360,220 L360,178 L336,178 L336,166 L312,166 L312,178 L288,178 L288,158 L264,158 L264,178 L240,178 L240,170 L216,170 L216,178 L192,178 L192,160 L168,160 L168,178 L144,178 L144,172 L120,172 L120,178 L96,178 L96,164 L72,164 L72,178 L48,178 L48,170 L24,170 L24,178 Z" />
+</vector>
