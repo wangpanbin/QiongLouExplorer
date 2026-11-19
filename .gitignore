@@ -1,19 +1,48 @@
 *.iml
 .gradle
-/local.properties
+/build
+/app/build
+/captures
+.externalNativeBuild
+.cxx
+/native
+.kotlin
+
+# 本机配置，不入库
+local.properties
 /.idea/caches
 /.idea/libraries
 /.idea/modules.xml
 /.idea/workspace.xml
 /.idea/navEditor.xml
 /.idea/assetWizardSettings.xml
+/.idea/misc.xml
+/.idea/gradle.xml
+
+# 构建产物
+*.apk
+*.aab
+*.ap_
+*.dex
+*.class
+*.hprof
+*.log
+/output.json
+/shots
+/.shots
+build-out.log
+build-err.log
+
+# 签名材料，绝不入库
+*.jks
+*.keystore
+keystore.properties
+
+# 系统 / 编辑器
 .DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
-local.properties
-# 覆盖全局 git.ignore 的 *.jar 规则:Gradle Wrapper 必须随仓库入库,
+Thumbs.db
+*.swp
+
+# 覆盖全局 git.ignore 的 *.jar 规则：Gradle Wrapper 必须随仓库入库，
 # 否则别人克隆后 ./gradlew 直接失效。
 !gradle/wrapper/gradle-wrapper.jar
-

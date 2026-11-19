@@ -128,7 +128,7 @@ public class ScanActivity extends BaseActivity {
     }
 
     /** 兼容纯数字、带前缀、以及带 URL 包装的三类输入。 */
-    static int parsePointId(String raw) {
+    public static int parsePointId(String raw) {
         if (raw == null) {
             return -1;
         }

@@ -105,6 +105,7 @@
     <string name="profile_level">Lv.%1$d 寻踪者</string>
     <string name="profile_default_nickname">探寻者</string>
     <string name="profile_default_signature">每一次驻足，都是一次寻踪</string>
+    <string name="profile_footer">琼楼寻踪 V0.1 · 文化资料为演示数据</string>
 
     <!-- 设置 -->
     <string name="settings_title">设置</string>

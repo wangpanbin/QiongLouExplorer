@@ -258,6 +258,7 @@ public class MapCanvasView extends View {
     private void drawMarkers(Canvas canvas) {
         float r = UiUtils.dp(getContext(), 7);
         float rSelected = UiUtils.dp(getContext(), 11);
+        List<RectF> drawnLabels = new ArrayList<>();
         for (int i = 0; i < points.size(); i++) {
             CulturePointEntity p = points.get(i);
             PointF pos = screenPositions.get(i);
@@ -266,21 +267,54 @@ public class MapCanvasView extends View {
             canvas.drawCircle(pos.x, pos.y, radius, isSelected ? markerSelectedPaint : markerPaint);
             canvas.drawCircle(pos.x, pos.y, radius, markerStrokePaint);
 
-            if (isSelected || points.size() <= 10) {
-                drawLabel(canvas, p.name, pos.x, pos.y - radius - UiUtils.dp(getContext(), 10));
+            if (isSelected) {
+                drawLabel(canvas, p.name, pos.x, pos.y - radius - UiUtils.dp(getContext(), 10), null);
+            } else {
+                drawLabel(canvas, p.name, pos.x, pos.y - radius - UiUtils.dp(getContext(), 10),
+                        drawnLabels);
             }
         }
     }
 
-    private void drawLabel(Canvas canvas, String text, float cx, float cy) {
+    /**
+     * 绘制标签。collision 非空时做矩形避让：与已有标签重叠就向上错开一层重试，
+     * 三层都撞则跳过，避免街区中心点位密集时文字叠成一团；选中点位的标签始终绘制。
+     */
+    private void drawLabel(Canvas canvas, String text, float cx, float cy,
+                          @Nullable List<RectF> collision) {
         float textWidth = labelPaint.measureText(text);
         float padH = UiUtils.dp(getContext(), 6);
         float padV = UiUtils.dp(getContext(), 3);
-        RectF bg = new RectF(cx - textWidth / 2 - padH, cy - UiUtils.dp(getContext(), 11) - padV,
-                cx + textWidth / 2 + padH, cy + UiUtils.dp(getContext(), 3) + padV);
+        float rowHeight = UiUtils.dp(getContext(), 20);
+        int maxRows = collision == null ? 1 : 3;
+        RectF bg = new RectF();
+        float drawY = cy;
+        for (int row = 0; row < maxRows; row++) {
+            bg.set(cx - textWidth / 2 - padH, drawY - UiUtils.dp(getContext(), 11) - padV,
+                    cx + textWidth / 2 + padH, drawY + UiUtils.dp(getContext(), 3) + padV);
+            if (collision == null || !intersectsAny(collision, bg)) {
+                break;
+            }
+            drawY -= rowHeight;
+            if (row == maxRows - 1) {
+                return;
+            }
+        }
+        if (collision != null) {
+            collision.add(bg);
+        }
         canvas.drawRoundRect(bg, UiUtils.dp(getContext(), 6), UiUtils.dp(getContext(), 6),
                 labelBgPaint);
-        canvas.drawText(text, cx, cy, labelPaint);
+        canvas.drawText(text, cx, drawY, labelPaint);
+    }
+
+    private boolean intersectsAny(List<RectF> rects, RectF target) {
+        for (RectF other : rects) {
+            if (RectF.intersects(other, target)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     @Override

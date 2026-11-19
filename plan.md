@@ -162,8 +162,8 @@ com.bin.qionglouexplorer
 - [x] **10. AI 导览**：`AssistantEngine` 本地规则（关键词→点位/年代/推荐路线三类模板）+ 聊天 UI + 快捷芯片
 - [x] **11. 个人中心 + 消息**：三统计、四个入口、`MessageActivity`（红点未读）、`FavoriteActivity`、`MyTaskActivity`
 - [x] **12. 离线**：`OfflineActivity`（缓存数/待同步数/立即同步模拟服务端校验），断网时详情页走 Room 兜底 + 顶部离线提示条
-- [ ] **13. 单测**：`GeoUtilsTest` + `AssistantEngineTest`，删掉 `ExampleUnitTest`
-- [ ] **14. 构建与验收**：`./gradlew assembleDebug`；`./gradlew test`；模拟器安装走完主线 7 步；断网复测详情/收藏/离线页
+- [x] **13. 单测**：`GeoUtilsTest` + `AssistantEngineTest`，删掉 `ExampleUnitTest`
+- [x] **14. 构建与验收**：`./gradlew assembleDebug`；`./gradlew test`；模拟器安装走完主线 7 步；断网复测详情/收藏/离线页
 - [ ] **15. Git 分步提交**（`git init` 后 6 次）：
   1. `chore(init): 初始化工程基建与依赖`（.gitignore、libs.versions.toml、build.gradle.kts、theme/color/string、drawable 基础）
   2. `docs(prd): 新增 V1.0 PRD 与 MVP 范围说明`（docs/PRD.md、docs/MVP.md、README.md）

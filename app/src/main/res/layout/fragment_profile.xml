@@ -345,9 +345,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:gravity="center"
-            android:text="@string/assistant_footer"
+            android:text="@string/profile_footer"
             android:textColor="@color/text_tertiary"
-            android:textSize="11sp" />
+            android:textSize="11sp"
+            android:gravity="center" />
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>
