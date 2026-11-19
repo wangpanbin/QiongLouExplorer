@@ -22,6 +22,7 @@ import com.bin.qionglouexplorer.data.repo.CultureRepository;
 import com.bin.qionglouexplorer.data.repo.TaskRepository;
 import com.bin.qionglouexplorer.ui.scan.ScanActivity;
 import com.bin.qionglouexplorer.util.GeoUtils;
+import com.bin.qionglouexplorer.util.NetworkMonitor;
 import com.bin.qionglouexplorer.util.UiUtils;
 import com.google.android.material.tabs.TabLayout;
 
@@ -34,6 +35,7 @@ public class DetailActivity extends BaseActivity {
 
     private CultureRepository cultureRepo;
     private TaskRepository taskRepo;
+    private NetworkMonitor networkMonitor;
 
     private int pointId;
     @Nullable
@@ -63,11 +65,29 @@ public class DetailActivity extends BaseActivity {
         }
         cultureRepo = new CultureRepository(this);
         taskRepo = new TaskRepository(this);
+        networkMonitor = new NetworkMonitor(this);
 
         bindViews();
         bindTabs();
         bindActions();
         observeData();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        networkMonitor.start(this::applyOfflineBanner);
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        networkMonitor.stop();
+    }
+
+    private void applyOfflineBanner(boolean online) {
+        findViewById(R.id.banner_offline)
+                .setVisibility(online ? View.GONE : View.VISIBLE);
     }
 
     private void bindViews() {
@@ -83,9 +103,7 @@ public class DetailActivity extends BaseActivity {
                 new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false));
         listRelated.setAdapter(relatedAdapter);
 
-        // 离线提示：详情页始终从 Room 读取，网络不可用时给出显式说明
-        findViewById(R.id.banner_offline)
-                .setVisibility(GeoUtils.isOnline(this) ? View.GONE : View.VISIBLE);
+        // 离线提示由 NetworkMonitor 在 onResume 内驱动，此处不预判
     }
 
     private void bindTabs() {

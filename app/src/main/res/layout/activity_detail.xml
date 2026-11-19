@@ -63,19 +63,7 @@
                     android:src="@drawable/ic_favorite_outline"
                     app:tint="@color/brand_accent" />
 
-                <TextView
-                    android:id="@+id/text_cached_tag"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|start"
-                    android:layout_margin="14dp"
-                    android:background="@drawable/bg_chip_white_translucent"
-                    android:paddingHorizontal="8dp"
-                    android:paddingVertical="3dp"
-                    android:text="@string/detail_cached_tag"
-                    android:textColor="@color/text_primary"
-                    android:textSize="10sp"
-                    android:visibility="gone" />
+
             </FrameLayout>
 
             <!-- 标题卡 -->
@@ -148,6 +136,18 @@
                         android:paddingVertical="3dp"
                         android:textColor="@color/brand_primary"
                         android:textSize="11sp" />
+                    <TextView
+                        android:id="@+id/text_cached_tag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:background="@drawable/bg_chip"
+                        android:paddingHorizontal="9dp"
+                        android:paddingVertical="3dp"
+                        android:text="@string/detail_cached_tag"
+                        android:textColor="@color/brand_success"
+                        android:textSize="11sp"
+                        android:visibility="gone" />
                 </LinearLayout>
 
                 <TextView

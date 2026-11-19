@@ -28,6 +28,7 @@ import com.bin.qionglouexplorer.data.repo.TaskRepository;
 import com.bin.qionglouexplorer.ui.detail.DetailActivity;
 import com.bin.qionglouexplorer.ui.message.MessageActivity;
 import com.bin.qionglouexplorer.util.GeoUtils;
+import com.bin.qionglouexplorer.util.NetworkMonitor;
 
 import java.util.List;
 
@@ -52,6 +53,7 @@ public class HomeFragment extends Fragment {
     private PointHotAdapter hotAdapter;
 
     private boolean searchMode = false;
+    private NetworkMonitor networkMonitor;
 
     @Nullable
     @Override
@@ -66,7 +68,7 @@ public class HomeFragment extends Fragment {
         cultureRepo = new CultureRepository(requireContext());
         messageRepo = new MessageRepository(requireContext());
         taskRepo = new TaskRepository(requireContext());
-
+        networkMonitor = new NetworkMonitor(requireContext());
         bindViews(view);
         bindAdapters(view);
         bindActions(view);
@@ -76,14 +78,19 @@ public class HomeFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-        refreshOfflineBanner();
+        networkMonitor.start(this::applyOfflineBanner);
     }
 
-    private void refreshOfflineBanner() {
+    @Override
+    public void onPause() {
+        super.onPause();
+        networkMonitor.stop();
+    }
+
+    private void applyOfflineBanner(boolean online) {
         View banner = getView() == null ? null : getView().findViewById(R.id.banner_offline);
         if (banner != null) {
-            banner.setVisibility(
-                    GeoUtils.isOnline(requireContext()) ? View.GONE : View.VISIBLE);
+            banner.setVisibility(online ? View.GONE : View.VISIBLE);
         }
     }
 
@@ -179,8 +186,8 @@ public class HomeFragment extends Fragment {
     private List<CulturePointEntity> nearbySorted(List<CulturePointEntity> points) {
         java.util.List<CulturePointEntity> copy = new java.util.ArrayList<>(points);
         java.util.Collections.sort(copy, (a, b) -> Double.compare(
-                com.bin.qionglouexplorer.util.GeoUtils.distanceFromAnchor(a.latitude, a.longitude),
-                com.bin.qionglouexplorer.util.GeoUtils.distanceFromAnchor(b.latitude, b.longitude)));
+                GeoUtils.distanceFromAnchor(a.latitude, a.longitude),
+                GeoUtils.distanceFromAnchor(b.latitude, b.longitude)));
         return copy;
     }
 
