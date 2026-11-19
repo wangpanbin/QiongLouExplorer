@@ -171,7 +171,7 @@ com.bin.qionglouexplorer
   4. `feat(ui): 实现 9 屏核心页面与探索闭环`（ui/、adapter/、layout、menu、MainActivity、Manifest）
   5. `feat(offline): 支持离线阅读与打卡待同步队列`
   6. `test: 补充地理与问答引擎单测并更新 README 验收章节`
-- [ ] **16. 收尾**：`git log --oneline` 检查、确认 `local.properties` 未被跟踪、可选打 tag `v0.1.0`
+- [x] **16. 收尾**：`git log --oneline` 检查、确认 `local.properties` 未被跟踪、可选打 tag `v0.1.0`
 
 ---
 
